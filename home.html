@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style1.css">
+
+    <!----------------bootstrap--------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!This link is directly connected with the  main bootstrap site where .css file is already stored.>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!------x----------bootstrap-----------x---------->
+
+    <!-----Font awesome icons---->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!To get icons which can be styled user defined>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/icofont/icofont.min.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!---------------------Aos Library---------------->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ------------favicon-------------- -->
+    <link rel="icon" type="image/png" href="img/favicon-5.png">
+
+
+    <title>Pacific Foundation</title>
+</head>
+
+<body>
+       <!-------------------Navigation----------------------->
+       <div class="scrollTop" onclick="scrolltoTop()">
+    </div>
+    <nav id="navbar" style="position: absolute;">
+        <div class="logo">
+            <img src="./img/LOGO-2-removebg-preview.png" style="height: 110px; width: 245px;">
+        </div> 
+        <div id="toggle"></div>
+        <div id="items">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="ourwork.html">OUR WORK</a></li>
+                <li><a href="career.html">CAREER</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="volunteer.html">VOLUNTEER</a></li>
+                <li><a href="donate.html">DONATE</a></li>
+                <li class="gallery"><a href="gallery.html" id="style-gallery">GALLERY</a></li>
+            </ul>
+        </div>
+
+        <!-- <form action="#" class="form">
+            <input type="search" placeholder="search here.." class="search-data" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form> -->
+    </nav>
+    <!-- javascript file -->
+    <!---------Jquery lib file------>
+    <script src="./js/jquery3.4.1.min.js"></script>
+    <!----x---Jquery lib file---x---->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/sticky.js"></script>
+    <script src="./js/team.js"></script>
+    <script src="./js/aos.js"></script>
+    <!--jquery file link-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+      const navbar = document.getElementById('navbar');
+      const toggle = document.getElementById('toggle');
+      const items = document.getElementById('items');
+
+      document.onclick = function(e){
+          if(e.target.id !=='navbar' && e.target.id !=='toggle' && e.target.id !=='items'){
+              toggle.classList.remove('active');
+              items.classList.remove('active');
+
+          }
+      }
+
+      toggle.onclick = function(){
+          toggle.classList.toggle('active');
+          items.classList.toggle('active');
+
+      }
+  </script>
+
+
+    <!--------x-----------Navigation-------------x---------->
+
+
+ <!-------------------HOME VIDEO SECTION---------------------->
+
+    <div class="carousel-inner" data-aos="zoom-in">
+        <div class="carousel-item active">
+            <video src="/img/home-video.mp4" autoplay loop muted height="854.55" width="1519.5"></video>
+        </div>
+        <div class="home-video-header" data-aos="fade-up">
+            <div class="home-video-content">
+                <h2>EMPOWERING ORPHANS AND VULNERABLE CHILDREN</h2>
+                <h1>To reach their full potential</h1>
+              <a href="covidwork.html" style="margin-left:auto;margin-right:auto;display:block;"><button class="btn" type="button" style="margin-left:auto;margin-right:auto;display:block;">Our Work</button></a> 
+              <!-- <h6><button type="button" class="btn-8" formtarget="gallery.html" style="margin-left:auto;margin-right:auto;display:block;"><a href="#" class="href">Media Coverage</a></button>
+              </h6> -->
+            </div>
+        </div>
+    </div>
+<!--------x-----------HOME VIDEO SECTION-------------x---------->
+    <!----------------section---------------------->
+     <div class="container-fluid head-section">
+         <div class="row row-head-section">
+        <marquee behavior="scroll" direction="left" scrollamount="20" onMouseOver="this.stop()" onMouseOut="this.start()">
+            <h3><span>P</span>acific <span>F</span>oundation is helping and giving services across all over the world. <a href="ourwork.html" class="href-head">Click here to know more..</a></h3>
+        </marquee>
+      </div>
+   </div>
+    <!------x----------section------------x---------->
+
+    <!------------------------panel------------------->
+
+    <div class="container-fluid panel-container">
+        <div class="row" id="row-1">
+            <div class="col-sm-4 panel-content text-center" style="margin-bottom: 21px;"  data-aos="fade-down">
+                <a href="ourwork.html"><img src="https://img.icons8.com/dusk/84/000000/children.png" class="png1" /></a>
+                <a href="ourwork.html" class="href-1">
+                    <p>Aims to improve Child's life</p>
+                </a>
+            </div>
+            <div class="col-sm-4 panel-content text-center" style="margin-bottom: 21px;"  data-aos="fade-up">
+                <a href="covidwork.html"><img src="https://img.icons8.com/nolan/84/city-hall.png" class="png2" /></a>
+                <a href="covidwork.html" class="href-1">
+                    <p>Getting support from Governmental Bodies</p>
+                </a>
+            </div>
+            <div class="col-sm-4 panel-content text-center" style="margin-bottom: 21px;"  data-aos="fade-down">
+                <a href="donate.html"><img src="https://img.icons8.com/dusk/84/000000/home.png" class="png3" /></a>
+                <a href="donate.html" class="href-1">
+                    <p>Home for the Orphans</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!------x----------panel----------------x-------->
+
+    <!---------------our Initiatives------------------->
+   <div class="container-fluid initiatives-fluid">
+       <h2>Our Initiatives</h2>
+     <div class="row initiate-row">
+        <div class="col-xl-6 col-lg-6 col-md-6 initiate-col" data-aos="fade-up">
+            <img src="./img/i4.jpg" height="400px;" class="d-block w-100" alt="..." style="border-radius: 22px;">
+            <div class="content-initiate">
+                <h3>DONATING FUNDS</h3>
+                <p>Pacific Foundation focuses on developing the potential of women and girls to drive long lasting equitable changes. We strategically emphasize on promoting quality healthcare, inclusive education,
+                </p>
+               <a href="donate.html"><button type="button" class="btn-2" style="margin-left:auto;margin-right:auto;display:block;">Know more</button></a>
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-6 initiate-col" data-aos="fade-down">
+            <img src="./img/i9.jpg" height="400px;" class="d-block w-100" alt="..." style="border-radius: 22px;">
+            <div class="content-initiate">
+                <h3>DISASTER PREPAREDNESS</h3>
+                <p>Pacific Foundation considers disaster preparedness and response as a critical aspect of its organisational mandate and has a ‘Disaster Preparedness and Response Strategy’ in place. Pacific Foundation also maintains Emergency Response
+                    Teams at National and State levels in the country to be able to make timely decisions.</p>
+                    <a href="ourwork.html"><button type="button" class="btn-2" style="margin-left:auto;margin-right:auto;display:block;">Know more</button></a>
+            </div>
+        </div>
+
+     </div>
+   </div>
+    <!-------x--------our Initiatives end----------x--------->
+
+    <!----------------over-view content---------------->
+    <div class="container-fluid" id="container-fluid3">
+        <div class="row" id="row-container">
+            <div class="col-xl-6 col-lg-6 col-md-6" id="embed-video-content" data-aos="fade-up">
+                <h2>Overview</h2>
+                <h3>Pacific Foundation is a Foundation for Social Change and Inclusion founded in this year of 2017 and registered in the Register of Non- Government Organizations in Mumbai, Maharashtra as well as the Central Register of Non- Government Organizations
+                    at the Ministry of Social Justice. The projects of Charitable Educational Institutes, Hospitals range from one-off humanitarian actions in response to a specific urgent need to long- term residential care and delivery of basic services
+                    in marginalized communities. They aim to help the most vulnerable members of our society and include work on different levels.
+                </h3>
+                <ol>
+                    <li> Analysis and assessment of needs;</li>
+                    <li> Developing programmes and strategies for development;</li>
+                    <li> Empowering and developing local communities;</li>
+                    <li> Interaction with stakeholders;</li>
+                </ol>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6" id="iframe-container" data-aos="fade-down">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3xGV1V2BwXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="d-block w-100"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-------x---------over-view content--------x-------->
+
+    <!----------------over-view content 2---------------->
+    <style>
+        #container-fluid4 {
+            width: 100%;
+        }
+    </style>
+
+    <div class="container-fluid" id="container-fluid4">
+        <div class="row" id="row-2">
+            <div class="head">
+                <h1 align="center">Our Mantra's</h1>
+            </div>
+            <div class="col-md-4 text-center view-2" id="overview-2">
+                <h2>Our Mission</h2>
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="./img/05-ORPHANAGE WELFARE.jpg" alt="Card image cap" style="height: 203px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Our Mission</h5>
+                        <p class="card-text text-1">The Mission of the Foundation is to work for Social Change and Inclusion
+                             works for the social development and integration of underprivileged individuals, groups and 
+                             communities in India.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-3" style="font-family: var(--Abel);" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Read More
+            </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content our-modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Our Mission</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body mode-text">
+                                        The Mission of the Foundation is to work for Social Change and Inclusion works for the 
+                                        social development and integration of underprivileged individuals, groups and communities
+                                         in India. To be a Knowledge/ Execution Partner of Schools, NGOs, Corporates,
+                                        and Government agencies for development programmes across India.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-3" style="font-family: var(--Josefin); margin-top: 13px;" data-bs-dismiss="modal">Close</button>
+                                       <a href="donate.html" style="text-decoration: none; font-family: var(--Josefin)"><button type="button" class="btn-3">Donate</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center view-2" id="overview-2">
+                <h2>Our Vision</h2>
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="./img/11- Old Age Home's Welfare.jpg" alt="Card image cap" style="height: 203px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Our Vision</h5>
+                        <p class="card-text text-1">Our work aims to break the vicious cycle of illiteracy, poverty, and social isolation, and to restore hope for a better future. We believe that every person has the right to access resources and opportunities.
+
+                        </p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-3" style="font-family: var(--Abel);" data-bs-toggle="modal" data-bs-target="#staticBackdropsection-2">
+              Read More
+            </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropsection-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content our-modal">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Our Vision</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body mode-text">
+
+                                        Our work aims to break the vicious cycle of illiteracy, poverty, and social isolation, and to restore hope for a better future. We believe that every person has the right to access resources and opportunities in order to live and develop with dignity
+                                        and to become an active and contributing member of our society. To work towards creating a better India which provides basic health, education and empowerment to every citizen.
+
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-3" style="font-family: var(--Josefin); margin-top: 13px;" data-bs-dismiss="modal">Close</button>
+                                        <a href="donate.html" style="text-decoration: none; font-family: var(--Josefin)"><button type="button" class="btn-3">Donate</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center view-2" id="overview-2">
+                <h2>Our Objectives</h2>
+                <div class="card shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="./img/08-Education Support for Merit Student.jpg" alt="Card image cap" style="height: 203px;">
+                    </div>
+                    <div class="card-body text-center our-objectives">
+                        <h5 class="card-title">Our Objectives</h5>
+                        <p class="card-text text-1">1. To work for the social development of underprivileged individuals, groups and communities in India;<br> 2. To encourage Education, Healthcare Development and Health promotion;<br>
+
+                        </p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-3" style="font-family: var(--Abel);" data-bs-toggle="modal" data-bs-target="#staticBackdropsection-3">
+              Read More
+            </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropsection-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content our-modal-obj">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Our Objectives</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body mode-text">
+                                        1. To work for the social development of underprivileged individuals, groups and communities in India;
+                                        <br> 2. To encourage Education, Healthcare Development and Health promotion;<br> 3. To assist in the process of social integration and personal realisation of underprivileged children, young people, adults and families;
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-3" style="font-family: var(--Josefin); margin-top: 13px;" data-bs-dismiss="modal">Close</button>
+                                        <a href="donate.html" style="text-decoration: none; font-family: var(--Josefin)"><button type="button" class="btn-3">Donate</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--------x--------over-view content 2--------x-------->
+
+
+    <!---------------------------------We provide section--------------------------------------->
+    <!-----------------------------PHOTOS------------------------->
+    <div class="container photos">
+        <h1>WE PROVIDE</h1>
+        <!---------------first-row------------------->
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/01- FOOD.jpg" class="img">
+                <div class="content">
+                    <h3>FOOD</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/02- MEDICAL SUPPORT.jpg" class="img">
+                <div class="content">
+                    <h3>MEDICAL SUPPORT</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/03- CHILD WELFARE.jpg" class="img">
+                <div class="content">
+                    <h3>CHILD WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/04- SENIOR CITIZEN'S WELFARE.jpg" class="img">
+                <div class="content">
+                    <h3>SENIOR CITIZEN'S WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <!---------------second-row------------------->
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/05-ORPHANAGE WELFARE.jpg" class="img">
+                <div class="content">
+                    <h3>ORPHANAGE WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/06-WOMEN'S WELFARE.jpg" class="img">
+                <div class="content">
+                    <h3>WOMEN WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/07- Disaster Relief.jpg" class="img">
+                <div class="content">
+                    <h3>DISASTER RELIEF</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/08-Education Support for Merit Student.jpg" class="img">
+                <div class="content">
+                    <h3>EDUCATION SUPPORT FOR STUDENT</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <!---------------third-row------------------->
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/09- Clean India Initiative.jpg" class="img">
+                <div class="content">
+                    <h3>CLEAN INDIA INITIATIVE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/10- Green Planet.jpg" class="img">
+                <div class="content">
+                    <h3>GREEN PLANET</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 photos-col" data-aos="fade-up">
+                <img src="./img/11- Old Age Home's Welfare.jpg" class="img">
+                <div class="content">
+                    <h3>OLD AGE HOME'S WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+            <div class="col-xl-3s col-lg-3 col-md-3 photos-col" data-aos="fade-down">
+                <img src="./img/12- Community Welfare.jpg" class="img">
+                <div class="content">
+                    <h3>COMMUNITY WELFARE</h3>
+                    <h6><button type="button" class="btn-3"><a href="donate.html" class="href">Donate</a></button>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------x---------------We provide section Ends---------------------x------------------>
+
+    <!-- -----------------------Our Values---------------------------- -->
+    <div class="container-fluid value-information">
+        <div class="row our-value">
+            <div class="col-xl-6 col-lg-6 col-md-6 values-col" data-aos="fade-up">
+                <h1 id="value">Our Prime Values</h1>
+                <p id="value-para"> <i class="fa fa-angle-double-right"></i> Respect for Human Rights.<br>
+                    <i class="fa fa-angle-double-right"></i> Commitment.<br>
+                    <i class="fa fa-angle-double-right"></i> Transparency.<br>
+                    <i class="fa fa-angle-double-right"></i> Integrity.<br>
+                    <i class="fa fa-angle-double-right"></i> Excellence.<br>
+                    <i class="fa fa-angle-double-right"></i> Compassion for all living beings.<br>
+                </p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 photos-col1" data-aos="fade-down">
+                <img src="./img/values.png" class="img-fluid" alt="...">
+
+            </div>
+        </div>
+    </div>
+    <!--x -----------------------Our Values--------------------------- x-->
+
+    <!-- -------------------panel-content-2--------------------- -->
+    <div class="container-fluid panel-content-2" data-aos="zoom-in">
+        <div class="row panel-items-2">
+            <h3>
+                Pacific Foundation is part of a global network of non-profit organizations leading the worldwide movement to end the need for orphanages by 2040.
+            </h3>
+        </div>
+    </div>
+    <!-- -------x------------panel-content-2--------------x----- -->
+
+    <!-- -------------------media-cover--------------------- -->
+    <div class="container-fluid media-cover" data-aos="fade-down">
+        <div class="row media-cover-itmes">
+            <img src="./img/logoleft.png" alt="" style="height: 106px; width: 578px;">
+            <img src="./img/unicef.png" alt="" style="height: 63px; width: 89px; margin-top: 23px;">
+            <img src="./img/logosright.png" alt="" style="height: 106px;  width: 501px;">
+            <h6><button type="button" class="btn-8" formtarget="gallery.html" style="margin-left:auto;margin-right:auto;display:block;"><a href="covidwork.html" class="href">Media Coverage</a></button>
+            </h6>
+
+        </div>
+    </div>
+    <!-- -------x------------media-cover-----------x------- -->
+
+    <!-- -------------image container----------------- -->
+    <div class="carousel-inner" data-aos="slide-up">
+        <div class="carousel-item active">
+            <img src="img/11_1.jpg" height="480px;" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <!-- -----x--------image container----------x------- -->
+
+   <!------------------------ Our services ------------------------>
+   <div class="title" data-aos="zoom-in">
+    <h1>Our Services</h1>
+</div>
+<div class="container services">
+    <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+            <i class="fa fa-graduation-cap" style="font-size: 50px;"></i>
+        </div>
+        <div class="flip-content">
+            <div>
+            <h3>CAREER SEMINAR</h3>
+            <p> Pacific Foundation is always there for an initiative. 
+                An overview of the seminar planning process that includes needs assessment, 
+                program planning , implementation and evaluation has been presented. </p>
+                <a href="donate.html"><button type="button" class="btn-4">Donate Us</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-aos="fade-down">
+        <div class="imgBx">
+            <i class="fa fa-comments" style="font-size: 50px;"></i>
+        </div>
+        <div class="flip-content">
+            <div>
+            <h3>ONLINE CHAT</h3>
+            <p>Online chatting has become increasingly popular. 
+                Individuals are no longer hindered from communicating with each other due
+                 to physical barriers such as distance.</p>
+                 <a href="donate.html"><button type="button" class="btn-4">Donate Us</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+            <i class="fa fa-user-md" id="new_user" style="font-size: 50px;"></i>
+        </div>
+        <div class="flip-content">
+            <div>
+            <h3>PROFESSIONAL</h3>
+            <p> Pacific Foundation provides professional interaction means a 
+                structured manner of sharing experiences, ideas and opinions about topics 
+                of professional interest with people who work in the same (or a related) profession, with
+                the outcome.</p>
+                <a href="donate.html"><button type="button" class="btn-4">Donate Us</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+            <i class="fa fa-graduation-cap" style="font-size: 50px;"></i>
+        </div>
+        <div class="flip-content">
+            <div>
+            <h3>FREE BOOKS</h3>
+            <p>Reading is one of the life skills that every child must pick up in their 
+                early age. The better they read, the more successful they become at school 
+                as well as in their life. Pacific Foundation provides free books for the underprivileged
+                children.</p>
+                <a href="donate.html"><button type="button" class="btn-4">Donate Us</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------xx--------------- Our services -------------xx----------->
+
+    <!--------------------- transparent-section --------------------->
+    <section id="services">
+        <div class="container transparent" data-aos="zoom-in">
+            <h1>A family for every child in our lifetime</h1>
+            <h6><button type="button" class="btn-5" formtarget="#" style="margin-left:auto; margin-right:auto; display:block; margin-top:19px;"><a href="donate.html" class="href-2">BECOME AN INVESTOR</a></button>
+            </h6>
+        </div>
+    </section>
+    <!--------x------------transparent-section-------------x----->
+
+
+    <!----------------------Footer-------------------->
+    <footer class="footer">
+        <div class="footer-left" data-aos="fade-up">
+            <img src="./img/footer_logo_2.png" class="center">
+            <p>The Mission of the Foundation is to work for Social Change and Inclusion works for the social development and integration of underprivileged individuals, groups and communities in India.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/pacificfoundations"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/LtdPgs"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tumblr"></i></a> <br> <br>
+                 <div class="socials-mail">
+                    <ul class="box-8">
+                    <li id="mail"><a href="mailto:pacificfoundation14@gmail.com"><i class="far fa-envelope"></i>pacificfoundation14@gmail.com</a></li> 
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <!-- <h2>OUR WORK</h2> -->
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>OUR WORK</h2>
+                    <li><a href="covidwork.html">Orphanages</a></li>
+                    <li><a href="gallery.html">Playing Schools</a></li>
+                    <li><a href="gallery.html">Entertainment</a></li>
+                    <li><a href="donate.html">Donation</a></li>
+                    <li><a href="ourwork.html">Relief Camps</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>COMPANY INFO</h2> -->
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>COMPANY INFO</h2>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="donate.html">Support Us</a></li>
+                    <li><a href="donate.html">Donate Us</a></li>
+                    <li><a href="contact.html">Enquire Us</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>WE OPERATE</h2> -->
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>WE OPERATE</h2>
+                    <li><a href="contact.html">Mumbai (Head Office)</a></li>
+                    <li><a href="contact.html">Delhi</a></li>
+                    <li><a href="contact.html">Ghaziabad</a></li>
+                    <li><a href="contact.html">Noida</a></li>
+                    <li><a href="contact.html">Gurugram</a></li>
+                </ul>
+            </li>
+
+            <li class="features">
+                <!-- <h2>USEFUL LINKS</h2> -->
+
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>USEFUL LINKS</h2>
+                    <li><a href="https://www.cowin.gov.in/">COVID-19 News</a></li>
+                    <li><a href="https://www.cowin.gov.in/">Vaccinations</a></li>
+                    <li><a href="covidwork.html">Orphange Work</a></li>
+                    <li><a href="donate.html">Fundraise</a></li>
+                    <li><a href="aboutus.html">Media Coverage</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>CONTACT US</h2> -->
+
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>CONTACT US</h2>
+                    <li><a>CONTACT (OFFICE): <br> <a href="tel:02227560314" id="footer-contact">022-27560314</a></a></li>
+                    <li><a>CUSTOMER CARE: <br> <a href="tel:1800256568" id="footer-contact">1800-256-568</a></a></li>
+                    <li><a>EMERGENCY: <br> <a href="https://web.whatsapp.com/" id="footer-contact">+91 7304753355</a></a></li>
+                </ul>
+            </li>
+
+
+            <li class="features">
+                <!-- <h2>OFFICE ADDRESS</h2> -->
+
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>OFFICE ADDRESS</h2>
+                    <p>
+                    Office No 207, Sector- 11,
+                    Monarch PLaza
+                    Opposite K star Hotel
+                    CBD Belapur, Navi Mumbai- 400614.
+                    </p>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="footer-bottom">
+            <p>All Right reserved by &copy; <a href="https://www.justdial.com/jdmart/Mumbai/Web-Spectrum-B-P-Marine-School-Cbd-belapur/022PXX22-XX22-160331124714-C2A3_BZDET/catalogue">Web Spectrum 2021</a></p>
+        </div>
+    </footer>
+    <!---------x-------------Footer----------x---------->
+    <!---------Jquery lib file------>
+    <script src="./js/jquery3.4.1.min.js"></script>
+    <!----x---Jquery lib file---x---->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/sticky.js"></script>
+    <!--jquery file link-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+                var scroll = document.querySelector('.scrollTop');
+                scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrolltoTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    </script>
+    <!---------------------Aos js Library---------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
+</html>

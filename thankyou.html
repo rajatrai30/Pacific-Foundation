@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pacific Foundation</title>
+    <link rel="stylesheet" href="CSS/thankyou.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="./CSS/gallery.css">
+
+    <!----------------bootstrap--------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!------x----------bootstrap-----------x---------->
+
+    <!-----Font awesome icons---->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+       <!---------------------Aos Library---------------->
+       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+     <!-- ------------favicon-------------- -->
+     <link rel="icon" type="image/png" href="img/favicon-5-removebg.png">
+
+
+</head>
+
+<body style="background: #fffdfa;">
+  <!-------------------Navigation----------------------->
+  <div class="scrollTop" onclick="scrolltoTop()">
+</div>
+<nav id="navbar" style="position: sticky; top: 0px;">
+    <div class="logo">
+        <img src="./img/LOGO-2-removebg-preview.png" style="height: 110px; width: 245px;">    </div> 
+    <div id="toggle"></div>
+    <div id="items">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="ourwork.html">OUR WORK</a></li>
+            <li><a href="career.html">CAREER</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="volunteer.html">VOLUNTEER</a></li>
+            <li><a href="donate.html">DONATE</a></li>
+            <li class="gallery"><a href="gallery.html" id="style-gallery">GALLERY</a></li>
+        </ul>
+    </div>
+
+    <!-- <form action="#" class="form">
+        <input type="search" placeholder="search here.." class="search-data" required>
+        <button type="submit" class="fas fa-search"></button>
+    </form> -->
+</nav>
+<!-- javascript file -->
+<!---------Jquery lib file------>
+<script src="./js/jquery3.4.1.min.js"></script>
+<!----x---Jquery lib file---x---->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/sticky-gallery.js"></script>
+<script src="./js/team.js"></script>
+<!--jquery file link-->
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const toggle = document.getElementById('toggle');
+  const items = document.getElementById('items');
+
+  document.onclick = function(e){
+      if(e.target.id !=='navbar' && e.target.id !=='toggle' && e.target.id !=='items'){
+          toggle.classList.remove('active');
+          items.classList.remove('active');
+
+      }
+  }
+
+  toggle.onclick = function(){
+      toggle.classList.toggle('active');
+      items.classList.toggle('active');
+
+  }
+</script>
+
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+    })
+
+    function scrolltoTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+</script>
+<!--------x-----------Navigation-------------x---------->
+
+<!--------------------------------THANK-U------------------------------->	
+<div class="container-fluid thank-container">
+	<div class="row thank-row">
+		<div class="col-sm-12 thank-col">
+			<h1 data-aos="fade-up">Thank You!!!</h1>
+			<h4 data-aos="zoom-in">For Contacting Pacific Foundation</h4>
+			<h6 data-aos="fade-down">We we will get back to you soon!</h6>
+		</div>
+	</div>
+</div>
+<!---------------x-----------------THANK-U-----------------x-------------->
+
+
+    <!--------------------- transparent-section --------------------->
+    <section id="services">
+        <div class="container transparent" data-aos="zoom-in">
+            <h1>A family for every child in our lifetime</h1>
+            <h6><button type="button" class="btn-5" formtarget="#" style="margin-left:auto; margin-right:auto; display:block; margin-top:19px;"><a href="donate.html" class="href-2">BECOME AN INVESTOR</a></button>
+            </h6>
+        </div>
+    </section>
+    <!--------x------------transparent-section-------------x----->
+
+
+    <!----------------------Footer-------------------->
+    <footer class="footer">
+        <div class="footer-left" data-aos="fade-up">
+            <img src="./img/footer_logo_2.png" class="center">
+            <p>The Mission of the Foundation is to work for Social Change and Inclusion works for the social development and integration of underprivileged individuals, groups and communities in India.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/pacificfoundations"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/LtdPgs"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tumblr"></i></a> <br> <br>
+                 <div class="socials-mail">
+                    <ul class="box-8">
+                    <li id="mail"><a href="mailto:pacificfoundation14@gmail.com"><i class="far fa-envelope"></i>pacificfoundation14@gmail.com</a></li> 
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <!-- <h2>OUR WORK</h2> -->
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>OUR WORK</h2>
+                    <li><a href="covidwork.html">Orphanages</a></li>
+                    <li><a href="gallery.html">Playing Schools</a></li>
+                    <li><a href="gallery.html">Entertainment</a></li>
+                    <li><a href="donate.html">Donation</a></li>
+                    <li><a href="ourwork.html">Relief Camps</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>COMPANY INFO</h2> -->
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>COMPANY INFO</h2>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="donate.html">Support Us</a></li>
+                    <li><a href="donate.html">Donate Us</a></li>
+                    <li><a href="contact.html">Enquire Us</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>WE OPERATE</h2> -->
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>WE OPERATE</h2>
+                    <li><a href="contact.html">Mumbai (Head Office)</a></li>
+                    <li><a href="contact.html">Delhi</a></li>
+                    <li><a href="contact.html">Ghaziabad</a></li>
+                    <li><a href="contact.html">Noida</a></li>
+                    <li><a href="contact.html">Gurugram</a></li>
+                </ul>
+            </li>
+
+            <li class="features">
+                <!-- <h2>USEFUL LINKS</h2> -->
+
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>USEFUL LINKS</h2>
+                    <li><a href="https://www.cowin.gov.in/">COVID-19 News</a></li>
+                    <li><a href="https://www.cowin.gov.in/">Vaccinations</a></li>
+                    <li><a href="covidwork.html">Orphange Work</a></li>
+                    <li><a href="donate.html">Fundraise</a></li>
+                    <li><a href="aboutus.html">Media Coverage</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- <h2>CONTACT US</h2> -->
+
+                <ul class="box-8" data-aos="fade-down">
+                    <h2>CONTACT US</h2>
+                    <li><a>CONTACT (OFFICE): <br> <a href="tel:02227560314" id="footer-contact">022-27560314</a></a></li>
+                    <li><a>CUSTOMER CARE: <br> <a href="tel:1800256568" id="footer-contact">1800-256-568</a></a></li>
+                    <li><a>EMERGENCY: <br> <a href="https://web.whatsapp.com/" id="footer-contact">+91 7304753355</a></a></li>
+                </ul>
+            </li>
+
+
+            <li class="features">
+                <!-- <h2>OFFICE ADDRESS</h2> -->
+
+                <ul class="box-8" data-aos="fade-up">
+                    <h2>OFFICE ADDRESS</h2>
+                    <p>
+                    Office No 207, Sector- 11,
+                    Monarch PLaza
+                    Opposite K star Hotel
+                    CBD Belapur, Navi Mumbai- 400614.
+                    </p>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="footer-bottom">
+            <p>All Right reserved by &copy; <a href="https://www.justdial.com/jdmart/Mumbai/Web-Spectrum-B-P-Marine-School-Cbd-belapur/022PXX22-XX22-160331124714-C2A3_BZDET/catalogue">Web Spectrum 2021</a></p>
+        </div>
+    </footer>
+    <!---------x-------------Footer----------x---------->
+<!---------Jquery lib file------>
+<script src="./js/jquery3.4.1.min.js"></script>
+<!----x---Jquery lib file---x---->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/sticky.js"></script>
+<!--jquery file link-->
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    window.addEventListener('scroll', function(){
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+    })
+
+    function scrolltoTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+</script>
+  <!---------------------Aos js Library---------------->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
+</body>
+
+</html>

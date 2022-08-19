@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/new.css">
+
+    <!----------------bootstrap--------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!This link is directly connected with the  main bootstrap site where .css file is already stored.>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!------x----------bootstrap-----------x---------->
+
+    <!-----Font awesome icons---->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!To get icons which can be styled user defined>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/icofont/icofont.min.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!---------------------Aos Library---------------->
+    <link rel="stylesheet" href="./CSS/aos.css">
+
+    <!-- ------------favicon-------------- -->
+    <link rel="icon" type="image/png" href="img/favicon-5.png">
+
+
+    <title>pacific foundation</title>
+</head>
+
+<body>
+    <!-------------------Navigation----------------------->
+    <div class="scrollTop" onclick="scrolltoTop()">
+    </div>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="./img/pf2.png" height="119px" width="252px"></div>
+        <div id="toggle"></div>
+        <div id="items">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="ourwork.html">OUR WORK</a></li>
+                <li><a href="career.html">CAREER</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <li><a href="volunteer.html">VOLUNTEER</a></li>
+                <li><a href="donate.html">DONATE</a></li>
+                <li><a href="gallery.html" id="style-gallery">GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <!---------Jquery lib file------>
+  <script src="./js/jquery3.4.1.min.js"></script>
+  <!----x---Jquery lib file---x---->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./js/sticky.js"></script>
+  <!--jquery file link-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      window.addEventListener('scroll', function(){
+              var scroll = document.querySelector('.scrollTop');
+              scroll.classList.toggle("active", window.scrollY > 500)
+      })
+
+      function scrolltoTop(){
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          })
+      }
+  </script>
+  <script>
+      const navbar = document.getElementById('navbar');
+      const toggle = document.getElementById('toggle');
+      const items = document.getElementById('items');
+
+      document.onclick = function(e){
+          if(e.target.id !=='navbar' && e.target.id !=='toggle' && e.target.id !=='items'){
+              toggle.classList.remove('active');
+              items.classList.remove('active');
+
+          }
+      }
+
+      toggle.onclick = function(){
+          toggle.classList.toggle('active');
+          items.classList.toggle('active');
+
+      }
+  </script>
+</body>
+
+</html>
